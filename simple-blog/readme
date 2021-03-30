@@ -1,5 +1,11 @@
-The version "Python 3.8.5" is recommended to use but the above versions will be fine.
-Don't run "python manage.py collectstaic" otherwise error occurs.
+--- simple-blog -------------------------------------------------------------------
+"simple-blog" only has an app without other tools such as nginx, apache, 
+gunicorn, settings for aws and azure and so on. Then, it's simply run with "python manage.py 0.0.0.0:8000".
+
+Moreover, you can use 2 deployment methods,"manual deployment" and "docker-compolse deployment".
+"docker-compolse deployment" is recommanded because you don't need to manually deploy the app 
+running "python3 -m venv venv", "source venv/bin/activate", "pip install -r requirements.txt" and so on.
+-----------------------------------------------------------------------------------
 
 --- You must do for settings.py for any deployments -------------------------------
 Change "SECRET_KEY = 'abcdefg'" to different secret key for secure. <-- Line 12
@@ -24,12 +30,15 @@ https://myaccount.google.com/lesssecureapps
 https://accounts.google.com/DisplayUnlockCaptcha
 ------------------------------------------------------------------------------------
 
---- Snippet for normal deployment --------------------------------------------------
+--- Snippet for manual deployment --------------------------------------------------
+The version "Python 3.8.5" is recommended to use but the above versions will be fine.
+"python manage.py collectstaic" is already run.
+So don't run "python manage.py collectstaic" otherwise error occurs.
 
 On ubuntu, run "pip install wheel" before running "pip install -r requirements.txt".
 Otherwise, error will occur. 
 
-After running "pip install -r requirements.txt", 
+After running "pip install -r requirements.txt""pip install -r requirements.txt", 
 run "python manage.py migrate".
 
 Then, create a super user running 
