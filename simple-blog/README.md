@@ -7,7 +7,7 @@ Moreover, you can use 2 deployment methods,"manual deployment" and "docker-compo
 "docker-compolse deployment" is recommanded because you don't need to manually deploy the app 
 running "python3 -m venv venv", "source venv/bin/activate", "pip install -r requirements.txt" and so on.
 
---
+---
 
 
 
