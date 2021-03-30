@@ -11,10 +11,9 @@ running "python3 -m venv venv", "source venv/bin/activate", "pip install -r requ
 
 ---
 
+---
 
-
-
---- You must do for settings.py for any deployments -------------------------------
+## You must do for settings.py for any deployments.
 
 Change "SECRET_KEY = 'abcdefg'" to different secret key for secure. <-- Line 12
 (If you don't mind security, don't need to change 'abcdefg' which works properly)
@@ -27,9 +26,11 @@ Replace "EMAIL_HOST_USER = 'example@gmail.com'" with your email address. <-- Lin
 
 Replase "EMAIL_HOST_PASSWORD = 'abcdefg'" with your email password. <-- Line 127 (Needed for "Reset Password")
 
-------------------------------------------------------------------------------------
+---
 
---- Optional -----------------------------------------------------------------------
+---
+
+## Option
 
 If you use gmail, do 2 things below to get over very strong google's security.
 
@@ -39,9 +40,11 @@ https://myaccount.google.com/lesssecureapps
 2. Allow access to your Google account: ON (Tap "Continue") ↓↓↓
 https://accounts.google.com/DisplayUnlockCaptcha
 
-------------------------------------------------------------------------------------
+---
 
---- Snippet for manual deployment --------------------------------------------------
+---
+
+## Snippet for manual deployment
 
 The version "Python 3.8.5" is recommended to use but the above versions will be fine.
 "python manage.py collectstaic" is already run.
@@ -58,9 +61,11 @@ Then, create a super user running
 
 Finally, run "python manage.py runserver 0.0.0.0:8000".
 
--------------------------------------------------------------------------------------
+---
 
---- Snippet for docker-compose deployment -------------------------------------------
+---
+
+## Snippet for docker-compose deployment
 
 There's already been "docker-compose.yml" and "dockerfiles" in this folder.
 
@@ -68,4 +73,4 @@ So just run "docker-compose up -d --build" for deployment.
 
 Then run "docker-compose down -v --rmi" to remove all containers, volumes and images.
 
--------------------------------------------------------------------------------------
+---
