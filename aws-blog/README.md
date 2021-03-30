@@ -10,7 +10,7 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 
 ---
 
-## You must do below for settings.py for 2 deployments:
+## You have to do below for settings.py for 2 deployments:
 
 Change "SECRET_KEY = 'abcdefg'" to different secret key for secure. <-- Line 11
 (If you don't mind security, don't need to change 'abcdefg' which works properly)
