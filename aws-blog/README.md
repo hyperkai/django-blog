@@ -17,7 +17,7 @@ Change "SECRET_KEY = 'abcdefg'" to different secret key for secure. <-- Line 11
 
 ### Change to yours:
 
----
+===
 
 AWS_ACCESS_KEY_ID = 'example' <-- 
 
@@ -25,7 +25,7 @@ AWS_SECRET_ACCESS_KEY = 'example' <-- Change to yours
 
 AWS_STORAGE_BUCKET_NAME = 'example-bucket' <-- Change to yours
 
----
+===
 
 EMAIL_HOST = 'smtp.gmail.com' <-- Change to yours for "Reset Password" function (Line 128)
 
