@@ -1,6 +1,6 @@
 ---
 
-#### simple-blog
+### simple-blog
 
 "simple-blog" only has an app without other tools such as nginx, apache, 
 gunicorn, settings for aws and azure and so on. Then, it's simply run with "python manage.py 0.0.0.0:8000".
