@@ -21,13 +21,13 @@ AWS_SECRET_ACCESS_KEY = 'example' <-- Change to yours
 
 AWS_STORAGE_BUCKET_NAME = 'example-bucket' <-- Change to yours
 
-EMAIL_HOST = 'smtp.gmail.com'" <-- Change to yours for "Reset Password" function (Line 128)
+EMAIL_HOST = 'smtp.gmail.com' <-- Change to yours for "Reset Password" function (Line 128)
 
-Replace "EMAIL_PORT = 587" with your email port. <-- Line 129 (Needed for "Reset Password")
+EMAIL_PORT = 587 <-- Change to yours for "Reset Password" function (Line 129)
 
-Replace "EMAIL_HOST_USER = 'example@gmail.com'" with your email address. <-- Line 131 (Needed for "Reset Password")
+EMAIL_HOST_USER = 'example@gmail.com' <-- Change to yours for "Reset Password" function (Line 131)
 
-Replase "EMAIL_HOST_PASSWORD = 'abcdefg'" with your email password. <-- Line 132 (Needed for "Reset Password")
+EMAIL_HOST_PASSWORD = 'abcdefg' <-- Change to yours for "Reset Password" function (Line 132)
 
 ---
 
