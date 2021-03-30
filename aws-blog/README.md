@@ -53,3 +53,13 @@ Then, create a super user running "python manage.py createsuperuser".
 Finally, run "python manage.py runserver 0.0.0.0:8000".
 
 ---
+
+## Snippet for docker-compose deployment:
+
+There's already been "docker-compose.yml" and "dockerfiles" in this folder.
+
+So just run "docker-compose up -d --build" for deployment.
+
+Then run "docker-compose down -v --rmi" to remove all containers, volumes and images.
+
+---
