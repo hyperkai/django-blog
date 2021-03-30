@@ -1,7 +1,14 @@
+--- aws-blog ---------------------------------------------------------------------
+"aws-blog" has an app with aws s3 bucket setting on settings.py. Then, it's run with "python manage.py 0.0.0.0:8000".
+
+Moreover, you can use 2 deployment methods,"manual deployment" and "docker-compolse deployment".
+"docker-compolse deployment" is recommanded because you don't need to manually deploy the app 
+running "python3 -m venv venv", "source venv/bin/activate", "pip install -r requirements.txt" and so on.
+-----------------------------------------------------------------------------------
 The version "Python 3.8.5" is recommended to use but the above versions will be fine.
 Don't run "python manage.py collectstaic" otherwise error occurs.
 
---- On settings.py: ----------------------------------------------------
+--- You must do for settings.py for any deployments ----------------------------------------------------
 Change "SECRET_KEY = 'abcdefg'" to different secret key for secure. <-- Line 12
 (If you don't mind security, don't need to change 'abcdefg' which works properly)
 
