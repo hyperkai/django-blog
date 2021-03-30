@@ -12,16 +12,16 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 
 ## You must do below for settings.py for 2 deployments:
 
-Change "SECRET_KEY = 'abcdefg'" to different secret key for secure. <-- Line 12
+Change "SECRET_KEY = 'abcdefg'" to different secret key for secure. <-- Line 11
 (If you don't mind security, don't need to change 'abcdefg' which works properly)
 
-Replace "EMAIL_HOST = 'smtp.gmail.com'" with your email host. <-- Line 123 (Needed for "Reset Password")
+Replace "EMAIL_HOST = 'smtp.gmail.com'" with your email host. <-- Line 128 (Needed for "Reset Password")
 
-Replace "EMAIL_PORT = 587" with your email port. <-- Line 124 (Needed for "Reset Password")
+Replace "EMAIL_PORT = 587" with your email port. <-- Line 129 (Needed for "Reset Password")
 
-Replace "EMAIL_HOST_USER = 'example@gmail.com'" with your email address. <-- Line 126 (Needed for "Reset Password")
+Replace "EMAIL_HOST_USER = 'example@gmail.com'" with your email address. <-- Line 131 (Needed for "Reset Password")
 
-Replase "EMAIL_HOST_PASSWORD = 'abcdefg'" with your email password. <-- Line 127 (Needed for "Reset Password")
+Replase "EMAIL_HOST_PASSWORD = 'abcdefg'" with your email password. <-- Line 132 (Needed for "Reset Password")
 
 ---
 
