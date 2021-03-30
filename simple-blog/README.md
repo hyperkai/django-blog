@@ -11,9 +11,7 @@ running "python3 -m venv venv", "source venv/bin/activate", "pip install -r requ
 
 ---
 
----
-
-## You must do for settings.py for any deployments.
+## You must do below for settings.py for any deployments.
 
 Change "SECRET_KEY = 'abcdefg'" to different secret key for secure. <-- Line 12
 (If you don't mind security, don't need to change 'abcdefg' which works properly)
@@ -28,8 +26,6 @@ Replase "EMAIL_HOST_PASSWORD = 'abcdefg'" with your email password. <-- Line 127
 
 ---
 
----
-
 ## Option
 
 If you use gmail, do 2 things below to get over very strong google's security.
@@ -39,8 +35,6 @@ https://myaccount.google.com/lesssecureapps
 
 2. Allow access to your Google account: ON (Tap "Continue") ↓↓↓
 https://accounts.google.com/DisplayUnlockCaptcha
-
----
 
 ---
 
@@ -60,8 +54,6 @@ Then, create a super user running
 "python manage.py createsuperuser".
 
 Finally, run "python manage.py runserver 0.0.0.0:8000".
-
----
 
 ---
 
