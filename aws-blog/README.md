@@ -19,15 +19,15 @@ Change "SECRET_KEY = 'abcdefg'" to different secret key for secure. <-- Line 11
 
 ===
 
-AWS_ACCESS_KEY_ID = 'example'
+AWS_ACCESS_KEY_ID = 'example' (Line 107)
 
-AWS_SECRET_ACCESS_KEY = 'example'
+AWS_SECRET_ACCESS_KEY = 'example' (Line 108)
 
-AWS_STORAGE_BUCKET_NAME = 'example-bucket'
+AWS_STORAGE_BUCKET_NAME = 'example-bucket' (Line 109)
 
 ===
 
-### Change to yours for "Reset Password" function
+### Change to yours for "Reset Password" function:
 
 EMAIL_HOST = 'smtp.gmail.com' (Line 128)
 
