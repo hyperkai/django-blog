@@ -109,9 +109,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-AWS_ACCESS_KEY_ID = 'AKIA4BV5UW4NZFS7VGZU'
-AWS_SECRET_ACCESS_KEY = 'rwC1OXhqMiQrOON3wMAIhZ7I+KL6vk9XOlg66C5Y'
-AWS_STORAGE_BUCKET_NAME = 'blog-soi-bucket'
+AWS_ACCESS_KEY_ID = 'example'
+AWS_SECRET_ACCESS_KEY = 'example'
+AWS_STORAGE_BUCKET_NAME = 'example-bucket'
 
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
