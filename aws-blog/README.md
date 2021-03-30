@@ -40,13 +40,16 @@ If you use gmail, do 2 things below to get over very strong google's security.
 
 ---
 
-When you run "pip install -r requirements.txt", one error will occur.
-To solve it, run "pip install wheel".
+## Snippet for manual deployment:
 
-After running "pip install -r requirements.txt", 
-run "python manage.py migrate".
+The version "Python 3.8.5" is recommended to use but the above versions will be fine. "python manage.py collectstaic" is already run. So don't run "python manage.py collectstaic" otherwise error occurs.
 
-then, if you want to create a super user,
-run "python manage.py createsuperuser".
+On ubuntu, run "pip install wheel" before running "pip install -r requirements.txt". Otherwise, error will occur.
+
+After running "pip install -r requirements.txt""pip install -r requirements.txt", run "python manage.py migrate".
+
+Then, create a super user running "python manage.py createsuperuser".
 
 Finally, run "python manage.py runserver 0.0.0.0:8000".
+
+---
