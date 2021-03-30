@@ -15,7 +15,13 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 Change "SECRET_KEY = 'abcdefg'" to different secret key for secure. <-- Line 11
 (If you don't mind security, don't need to change 'abcdefg' which works properly)
 
-Replace "EMAIL_HOST = 'smtp.gmail.com'" with your email host. <-- Line 128 (Needed for "Reset Password")
+AWS_ACCESS_KEY_ID = 'example' <-- Change to yours
+
+AWS_SECRET_ACCESS_KEY = 'example' <-- Change to yours
+
+AWS_STORAGE_BUCKET_NAME = 'example-bucket' <-- Change to yours
+
+EMAIL_HOST = 'smtp.gmail.com'" <-- Change to yours for "Reset Password" function (Line 128)
 
 Replace "EMAIL_PORT = 587" with your email port. <-- Line 129 (Needed for "Reset Password")
 
