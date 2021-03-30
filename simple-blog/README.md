@@ -31,9 +31,11 @@ Replase "EMAIL_HOST_PASSWORD = 'abcdefg'" with your email password. <-- Line 127
 If you use gmail, do 2 things below to get over very strong google's security.
 
 1. Allow less secure apps: ON ↓↓↓ 
+
 https://myaccount.google.com/lesssecureapps
 
 2. Allow access to your Google account: ON (Tap "Continue") ↓↓↓
+
 https://accounts.google.com/DisplayUnlockCaptcha
 
 ---
