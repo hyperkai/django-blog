@@ -10,11 +10,6 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 
 ---
 
-The version "Python 3.8.5" is recommended to use but the above versions will be fine.
-Don't run "python manage.py collectstaic" otherwise error occurs.
-
---- 
-
 ## You must do below for settings.py for 2 deployments:
 
 Change "SECRET_KEY = 'abcdefg'" to different secret key for secure. <-- Line 12
