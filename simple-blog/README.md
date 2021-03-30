@@ -1,4 +1,4 @@
---- simple-blog -------------------------------------------------------------------
+simple-blog
 
 "simple-blog" only has an app without other tools such as nginx, apache, 
 gunicorn, settings for aws and azure and so on. Then, it's simply run with "python manage.py 0.0.0.0:8000".
@@ -7,7 +7,7 @@ Moreover, you can use 2 deployment methods,"manual deployment" and "docker-compo
 "docker-compolse deployment" is recommanded because you don't need to manually deploy the app 
 running "python3 -m venv venv", "source venv/bin/activate", "pip install -r requirements.txt" and so on.
 
------------------------------------------------------------------------------------
+
 
 --- You must do for settings.py for any deployments -------------------------------
 
