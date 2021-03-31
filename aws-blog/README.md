@@ -48,6 +48,8 @@ EMAIL_HOST_PASSWORD = 'abcdefg' (Line 132)
 
 ### There is the setting for postgresql in settings.py:
 
+aws-blog / django_project / settings.py
+
 If you use postgresql rather than default sqlite, comment out the sqlite setting and uncomment the postgresql setting like below.
 
 *You need to install and configure postgresql yourself.
