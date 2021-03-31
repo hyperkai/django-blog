@@ -18,7 +18,7 @@ simple-blog / django_project / settings.py
 ### Change 4 lines to yours for "Reset Password" function:
 
 ```
-##### Email for "Reset password" function #####
+##### Email settings for "Reset password" function #####
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com' # Change to yours
@@ -27,7 +27,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'example@gmail.com' # Change to yours
 EMAIL_HOST_PASSWORD = 'abcdefg' # Change to yours
 
-###############################################
+#########################################################
 ```
 
 ---
@@ -75,7 +75,7 @@ simple-blog / django_project / settings.py
 If you use aws s3 bucket rather than default app file system, uncomment the aws s3 bucket setting then change it.
 
 ```
-##### AWS s3 bucket #####
+##### AWS s3 bucket settings #####
 
 AWS_ACCESS_KEY_ID = 'example' # Change to yours
 AWS_SECRET_ACCESS_KEY = 'example' # Change to yours
@@ -87,7 +87,7 @@ AWS_DEFAULT_ACL = None
 STATICFILES_STORAGE = 'django_project.s3utils.StaticRootS3Boto3Storage'
 DEFAULT_FILE_STORAGE = 'django_project.s3utils.MediaRootS3Boto3Storage'
 
-##########################
+###################################
 ```
 
 ===
