@@ -22,23 +22,23 @@ aws-blog / django_project / settings.py
 
 SECRET_KEY = 'abcdefg' (Line 11) <-- If you don't mind security, don't need to change 'abcdefg' which works properly.
 
-AWS_ACCESS_KEY_ID = 'example' (Line 107)
+AWS_ACCESS_KEY_ID = 'example' (Line 120)
 
-AWS_SECRET_ACCESS_KEY = 'example' (Line 108)
+AWS_SECRET_ACCESS_KEY = 'example' (Line 121)
 
-AWS_STORAGE_BUCKET_NAME = 'example-bucket' (Line 109)
+AWS_STORAGE_BUCKET_NAME = 'example-bucket' (Line 122)
 
 ===
 
 ### Change to yours for "Reset Password" function:
 
-EMAIL_HOST = 'smtp.gmail.com' (Line 128)
+EMAIL_HOST = 'smtp.gmail.com' (Line 141)
 
-EMAIL_PORT = 587 (Line 129)
+EMAIL_PORT = 587 (Line 142)
 
-EMAIL_HOST_USER = 'example@gmail.com' (Line 131)
+EMAIL_HOST_USER = 'example@gmail.com' (Line 146)
 
-EMAIL_HOST_PASSWORD = 'abcdefg' (Line 132)
+EMAIL_HOST_PASSWORD = 'abcdefg' (Line 145)
 
 ===
 
@@ -122,7 +122,7 @@ User.objects.create_superuser('admin', 'admin@admin.com', 'adminpw')
 
 ===
 
-There's already been "docker-compose.yml" and "dockerfiles" in this folder.
+There's already been "docker-compose.yml" and "dockerfile" in this folder.
 
 So just run "docker-compose up -d --build" for deployment.
 
