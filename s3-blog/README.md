@@ -34,6 +34,8 @@ EMAIL_HOST_PASSWORD = 'abcdefg' # Change to yours
 
 ## Optional for settings.py for 2 deployments:
 
+simple-blog / django_project / settings.py
+
 ===
 
 ### Change "SECRET_KEY":
@@ -45,8 +47,6 @@ SECRET_KEY = 'abcdefg' # Change to yours
 ===
 
 ### There is the setting for postgresql:
-
-simple-blog / django_project / settings.py
 
 If you use postgresql rather than default sqlite, comment out the sqlite setting and uncomment the postgresql setting then change 4 lines(# Change to yours).
 
@@ -76,9 +76,7 @@ DATABASES = {
 
 ===
 
-### There is the setting for aws s3 bucket in settings.py:
-
-simple-blog / django_project / settings.py
+### There is the setting for aws s3 bucket:
 
 If you use aws s3 bucket rather than default app file system, uncomment the aws s3 bucket setting then change 3 lines(# Change to yours).
 
