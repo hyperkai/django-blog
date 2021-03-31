@@ -10,7 +10,7 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 
 ---
 
-## You have to do for settings.py for 2 deployments:
+## You have to do for settings.py for 2 deployments: aws-blog/django_project/settings.py
 
 ===
 
@@ -44,7 +44,7 @@ EMAIL_HOST_PASSWORD = 'abcdefg' (Line 132)
 
 ===
 
-### Change createsuperuser.py for 2 deployments:
+### Change createsuperuser.py for 2 deployments: aws-blog/createsuperuser.py
 
 1. Change two 'admin' for your super user name:
 2. Change 'admin@admin.com' for your email address:
