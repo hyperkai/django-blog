@@ -1,3 +1,6 @@
+
+
+
 --- 
 
 ## aws-blog:
@@ -48,7 +51,8 @@ EMAIL_HOST_PASSWORD = 'abcdefg' (Line 132)
 If you use postgresql rather than default sqlite, comment out the sqlite setting and uncomment the postgresql setting like below.
 
 *You need to install and configure postgresql yourself.
-`
+
+```
 '''
 DATABASES = {
     'default': {
@@ -57,7 +61,7 @@ DATABASES = {
     }
 }
 '''
-`
+```
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
