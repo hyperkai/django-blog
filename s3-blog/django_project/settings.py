@@ -120,10 +120,10 @@ USE_TZ = True
 ''' 
 ##### AWS s3 bucket #####
 
-AWS_ACCESS_KEY_ID = 'example'
-AWS_SECRET_ACCESS_KEY = 'example'
-AWS_STORAGE_BUCKET_NAME = 'example-bucket'
-
+AWS_ACCESS_KEY_ID = 'example' <-- Change to yours
+AWS_SECRET_ACCESS_KEY = 'example' <-- Change to yours
+AWS_STORAGE_BUCKET_NAME = 'example-bucket' <-- Change to yours
+ 
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 
@@ -143,13 +143,13 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
 
-##### AWS s3 bucket #####
+##### Email for "Reset password" function #####
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.gmail.com' # Change to yours
+EMAIL_PORT = 587 # Change to yours
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'example@gmail.com' # Put your email address
-EMAIL_HOST_PASSWORD = 'abcdefg' # Put your email password
+EMAIL_HOST_USER = 'example@gmail.com' # Change to yours
+EMAIL_HOST_PASSWORD = 'abcdefg' # Change to yours
 
-##########################
+###############################################
