@@ -17,6 +17,7 @@ simple-blog / django_project / settings.py
 
 ### Change 4 lines to yours for "Reset Password" function:
 
+```
 EMAIL_HOST = 'smtp.gmail.com' (Line 147)
 
 EMAIL_PORT = 587 (Line 148)
@@ -24,6 +25,7 @@ EMAIL_PORT = 587 (Line 148)
 EMAIL_HOST_USER = 'example@gmail.com' (Line 150)
 
 EMAIL_HOST_PASSWORD = 'abcdefg' (Line 151)
+```
 
 ---
 
@@ -122,8 +124,10 @@ simple-blog / createsuperuser.py
 2. Change an 'admin@admin.com' for your email address:
 3. Change an 'adminpw' for your super user password:
 
+```
 User.objects.filter(username='admin').exists() or \
 User.objects.create_superuser('admin', 'admin@admin.com', 'adminpw')
+```
 
 *It works properly with default setting so you don't need to change it if you don't want.
 
