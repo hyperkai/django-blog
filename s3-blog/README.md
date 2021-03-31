@@ -103,7 +103,7 @@ The version "Python 3.8.5" is recommended to use but the above versions will be 
 
 You may need to run "pip install wheel" before running "pip install -r requirements.txt". Otherwise, error may occur.
 
-After running "pip install -r requirements.txt""pip install -r requirements.txt", run "python manage.py migrate".
+After running "pip install -r requirements.txt", run "python manage.py migrate".
 
 Then, create a super user running "python manage.py createsuperuser".
 
