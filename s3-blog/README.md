@@ -18,7 +18,7 @@ simple-blog / django_project / settings.py
 ### Change 4 lines(# Change to yours) for "Reset Password" function:
 
 ```
-##### Email settings for "Reset password" function #####
+##### Email setting for "Reset password" function #####
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com' # Change to yours
@@ -27,16 +27,24 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'example@gmail.com' # Change to yours
 EMAIL_HOST_PASSWORD = 'abcdefg' # Change to yours
 
-#########################################################
+########################################################
 ```
 
 ---
 
-## Optional for 2 deployments:
+## Optional for settings.py for 2 deployments:
 
 ===
 
-### There is the setting for postgresql in settings.py:
+### Change "SECRET_KEY":
+
+```
+SECRET_KEY = 'abcdefg' # Change to yours
+```
+
+===
+
+### There is the setting for postgresql:
 
 simple-blog / django_project / settings.py
 
@@ -75,7 +83,7 @@ simple-blog / django_project / settings.py
 If you use aws s3 bucket rather than default app file system, uncomment the aws s3 bucket setting then change 3 lines(# Change to yours).
 
 ```
-##### AWS s3 bucket settings #####
+##### AWS s3 bucket setting #####
 
 AWS_ACCESS_KEY_ID = 'example' # Change to yours
 AWS_SECRET_ACCESS_KEY = 'example' # Change to yours
@@ -87,7 +95,7 @@ AWS_DEFAULT_ACL = None
 STATICFILES_STORAGE = 'django_project.s3utils.StaticRootS3Boto3Storage'
 DEFAULT_FILE_STORAGE = 'django_project.s3utils.MediaRootS3Boto3Storage'
 
-###################################
+##################################
 ```
 
 ===
