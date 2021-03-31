@@ -12,12 +12,12 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 
 ## You have to do for settings.py for 2 deployments:
 
-Change "SECRET_KEY = 'abcdefg'" to different secret key for secure. <-- Line 11
-(If you don't mind security, don't need to change 'abcdefg' which works properly)
-
 ### Change to yours:
 
 ===
+
+SECRET_KEY = 'abcdefg' (Line 11)
+(If you don't mind security, don't need to change 'abcdefg' which works properly)
 
 AWS_ACCESS_KEY_ID = 'example' (Line 107)
 
