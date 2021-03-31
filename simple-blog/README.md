@@ -9,11 +9,15 @@ Moreover, you can use 2 deployment methods, "manual deployment" and "docker-comp
 "docker-compolse deployment" is recommanded because you don't need to manually deploy the app 
 running "python3 -m venv venv", "source venv/bin/activate", pip install -r requirements.txt" and so on.
 
+Run "docker-compose up -d --build" (simple-blog/docker-compose.yml)
+
+*Run "docker-compose down -v --rmi" to remove all containers, volumes and images.
+
 ---
 
 ## You have to do for settings.py for 2 deployments:
 
-simple-blog / django_project / settings.py
+simple-blog/django_project/settings.py
 
 ### Change 4 lines(# Change to yours) for "Reset password" function:
 
@@ -34,7 +38,7 @@ EMAIL_HOST_PASSWORD = 'abcdefg' # Change to yours
 
 ## Optional for settings.py for 2 deployments:
 
-simple-blog / django_project / settings.py
+simple-blog/django_project/settings.py
 
 ===
 
@@ -146,7 +150,7 @@ Finally, run "python manage.py runserver 0.0.0.0:8000".
 
 ### Just run "docker-compose up -d --build":
 
-simple-blog / docker-compose.yml, simple-blog / Dockerfile
+simple-blog/docker-compose.yml, simple-blog/Dockerfile
 
 There are "docker-compose.yml" and "Dockerfile".
 
@@ -156,7 +160,7 @@ There are "docker-compose.yml" and "Dockerfile".
 
 ### Change createsuperuser.py (Optional):
 
-simple-blog / createsuperuser.py
+simple-blog/createsuperuser.py
 
 1. Change two 'admin' for your super user name:
 2. Change an 'admin@admin.com' for your email address:
