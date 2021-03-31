@@ -43,11 +43,41 @@ EMAIL_HOST_PASSWORD = 'abcdefg' (Line 132)
 
 ## Optional:
 
+### There is the setting for postgresql:
+
+If you use postgresql rather than default sqlite, comment out the sqlite setting and uncomment the postgresql setting like below.
+
+*You need to install and configure postgresql yourself.
+
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db_sqlite3',
+    }
+}
+'''
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mydb',
+        'USER': 'myuser',
+        'PASSWORD': 'mypw',
+        'HOST': '10.156.58.93',
+        'PORT': '5432',
+    }
+}
+
+===
+
 ### If you use gmail, do 2 things below to get over very strong google's security.
 
 1. Allow less secure apps: ON ---> https://myaccount.google.com/lesssecureapps
 
 2. Allow access to your Google account: ON (Tap "Continue") ---> https://accounts.google.com/DisplayUnlockCaptcha
+
+===
 
 ---
 
