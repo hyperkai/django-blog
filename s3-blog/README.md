@@ -1,8 +1,8 @@
 ---
 
-## s3-blog:
+## simple-blog:
 
-"s3-blog" only has an app without other tools such as nginx, apache, gunicorn and so on. 
+"simple-blog" only has an app without other tools such as nginx, apache, gunicorn and so on. 
 Then, it's simply run with "python manage.py 0.0.0.0:8000".
 
 Moreover, you can use 2 deployment methods,"manual deployment" and "docker-compolse deployment".
@@ -13,7 +13,7 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 
 ## You have to do for settings.py for 2 deployments:
 
-s3-blog / django_project / settings.py
+simple-blog / django_project / settings.py
 
 ### Change 4 lines to yours for "Reset Password" function:
 
@@ -33,7 +33,7 @@ EMAIL_HOST_PASSWORD = 'abcdefg' (Line 151)
 
 ### There is the setting for postgresql in settings.py:
 
-s3-blog / django_project / settings.py
+simple-blog / django_project / settings.py
 
 If you use postgresql rather than default sqlite, comment out the sqlite setting and uncomment the postgresql setting then change it.
 
@@ -65,7 +65,7 @@ DATABASES = {
 
 ### There is the setting for aws s3 bucket in settings.py:
 
-s3-blog / django_project / settings.py
+simple-blog / django_project / settings.py
 
 If you use aws s3 bucket rather than default app file system, uncomment the aws s3 bucket setting then change it.
 
@@ -114,11 +114,11 @@ Finally, run "python manage.py runserver 0.0.0.0:8000".
 ===
 
 ### Change createsuperuser.py (Optional):
-s3-blog / createsuperuser.py
+simple-blog / createsuperuser.py
 
 1. Change two 'admin' for your super user name:
-2. Change 'admin@admin.com' for your email address:
-3. Change 'adminpw' for your super user password:
+2. Change an 'admin@admin.com' for your email address:
+3. Change an 'adminpw' for your super user password:
 
 User.objects.filter(username='admin').exists() or \
 User.objects.create_superuser('admin', 'admin@admin.com', 'adminpw')
