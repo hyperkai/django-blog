@@ -74,10 +74,10 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mydb',
-        'USER': 'myuser',
-        'PASSWORD': 'mypw',
-        'HOST': '10.156.58.93',
+        'NAME': 'mydb', # Change to yours
+        'USER': 'myuser', # Change to yours
+        'PASSWORD': 'mypw', # Change to yours
+        'HOST': '10.156.58.93', # Change to yours
         'PORT': '5432',
     }
 }
@@ -120,9 +120,9 @@ USE_TZ = True
 ''' 
 ##### AWS s3 bucket #####
 
-AWS_ACCESS_KEY_ID = 'example' <-- Change to yours
-AWS_SECRET_ACCESS_KEY = 'example' <-- Change to yours
-AWS_STORAGE_BUCKET_NAME = 'example-bucket' <-- Change to yours
+AWS_ACCESS_KEY_ID = 'example' # Change to yours
+AWS_SECRET_ACCESS_KEY = 'example' # Change to yours
+AWS_STORAGE_BUCKET_NAME = 'example-bucket' # Change to yours
  
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
