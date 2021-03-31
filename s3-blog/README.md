@@ -38,7 +38,7 @@ simple-blog / django_project / settings.py
 
 ===
 
-### Change "SECRET_KEY":
+### Change "SECRET_KEY" for more security:
 
 ```
 SECRET_KEY = 'abcdefg' # Change to yours
