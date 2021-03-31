@@ -15,7 +15,7 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 
 simple-blog / django_project / settings.py
 
-### Change 4 lines(# Change to yours) for "Reset Password" function:
+### Change 4 lines(# Change to yours) for "Reset password" function:
 
 ```
 ##### Email setting for "Reset password" function #####
