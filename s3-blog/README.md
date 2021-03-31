@@ -3,9 +3,9 @@
 
 --- 
 
-## aws-blog:
+## s3-blog:
 
-"aws-blog" has an app with aws s3 bucket setting on settings.py. Then, it's run with "python manage.py 0.0.0.0:8000".
+"s3-blog" has an app with aws s3 bucket setting on settings.py. Then, it's run with "python manage.py 0.0.0.0:8000".
 
 Moreover, you can use 2 deployment methods,"manual deployment" and "docker-compolse deployment".
 "docker-compolse deployment" is recommanded because you don't need to manually deploy the app 
@@ -14,7 +14,7 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 ---
 
 ## You have to do for settings.py for 2 deployments:
-aws-blog / django_project / settings.py
+s3-blog / django_project / settings.py
 
 ===
 
@@ -48,7 +48,7 @@ EMAIL_HOST_PASSWORD = 'abcdefg' (Line 145)
 
 ### There is the setting for postgresql in settings.py:
 
-aws-blog / django_project / settings.py
+s3-blog / django_project / settings.py
 
 If you use postgresql rather than default sqlite, comment out the sqlite setting and uncomment the postgresql setting like below.
 
@@ -109,7 +109,7 @@ Finally, run "python manage.py runserver 0.0.0.0:8000".
 ===
 
 ### Change createsuperuser.py (Optional):
-aws-blog / createsuperuser.py
+s3-blog / createsuperuser.py
 
 1. Change two 'admin' for your super user name:
 2. Change 'admin@admin.com' for your email address:
@@ -127,5 +127,7 @@ There's already been "docker-compose.yml" and "dockerfile" in this folder.
 So just run "docker-compose up -d --build" for deployment.
 
 Then run "docker-compose down -v --rmi" to remove all containers, volumes and images.
+
+===
 
 ---
