@@ -11,6 +11,10 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 
 Run "docker-compose up -d --build" (simple-blog/docker-compose.yml)
 
+Default super user name is 'admin'.
+
+Default super user password is 'adminpw'
+
 *Run "docker-compose down -v --rmi" to remove all containers, volumes and images.
 
 ---
