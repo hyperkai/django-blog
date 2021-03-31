@@ -96,7 +96,7 @@ DEFAULT_FILE_STORAGE = 'django_project.s3utils.MediaRootS3Boto3Storage'
 ##################################
 ```
 
-*I commented out the code in simple-blog/users/models.py to enable this app to work with "AWS s3 bucket" properly.
+*I commented out the code in "simple-blog/users/models.py" to enable this app to work with "AWS s3 bucket" properly.
 
 Otherwise, this app doesn't work with "AWS s3 bucket" properly.
 
