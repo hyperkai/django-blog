@@ -150,9 +150,9 @@ simple-blog / docker-compose.yml
 
 simple-blog / Dockerfile
 
-There's already been "docker-compose.yml" and "Dockerfile" in this folder.
+There are "docker-compose.yml" and "Dockerfile.
 
-Run "docker-compose down -v --rmi" to remove all containers, volumes and images.
+*Run "docker-compose down -v --rmi" to remove all containers, volumes and images.
 
 ===
 
