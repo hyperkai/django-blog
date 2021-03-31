@@ -1,19 +1,20 @@
 ---
 
-## simple-blog:
+## unmix-blog:
 
-"simple-blog" only has an app without other tools such as nginx, apache, gunicorn and so on. 
-Then, it's simply run with "python manage.py 0.0.0.0:8000".
+"unmix-blog" has an app, nginx and gunicorn.
 
-Moreover, you can use 2 deployment methods, "manual deployment" and "docker-compolse deployment".
-"docker-compolse deployment" is recommanded because you don't need to manually deploy the app 
-running "python3 -m venv venv", "source venv/bin/activate", pip install -r requirements.txt" and so on.
+You can only deploy this app with "docker-compose".
+
+Run "docker-compose up -d --build" (unmix-blog/docker-compose.yml)
+
+*Run "docker-compose down -v --rmi" to remove all containers, volumes and images.
 
 ---
 
-## You have to do for settings.py for 2 deployments:
+## You have to do for settings.py:
 
-simple-blog / django_project / settings.py
+unmix-blog/django_project/settings.py
 
 ### Change 4 lines(# Change to yours) for "Reset password" function:
 
@@ -32,9 +33,9 @@ EMAIL_HOST_PASSWORD = 'abcdefg' # Change to yours
 
 ---
 
-## Optional for settings.py for 2 deployments:
+## Optional for settings.py:
 
-simple-blog / django_project / settings.py
+unmix-blog/django_project/settings.py
 
 ===
 
@@ -96,7 +97,7 @@ DEFAULT_FILE_STORAGE = 'django_project.s3utils.MediaRootS3Boto3Storage'
 ##################################
 ```
 
-*I commented out the code in "simple-blog/users/models.py" to enable this app to work with "AWS s3 bucket" properly.
+*I commented out the code in "unmix-blog/users/models.py" to enable this app to work with "AWS s3 bucket" properly.
 
 Otherwise, this app doesn't work with "AWS s3 bucket" properly.
 
@@ -126,27 +127,13 @@ Otherwise, this app doesn't work with "AWS s3 bucket" properly.
 
 ---
 
-## Snippet for manual deployment:
-
-The version "Python 3.8.5" is recommended to use but the above versions will be fine.
-
-You may need to run "pip install wheel" before running "pip install -r requirements.txt". Otherwise, error may occur.
-
-After running "pip install -r requirements.txt", run "python manage.py migrate".
-
-Then, create a super user running "python manage.py createsuperuser".
-
-Finally, run "python manage.py runserver 0.0.0.0:8000".
-
----
-
 ## Snippet for docker-compose deployment:
 
 ===
 
 ### Just run "docker-compose up -d --build":
 
-simple-blog / docker-compose.yml, simple-blog / Dockerfile
+unmix-blog/docker-compose.yml, unmix-blog/Dockerfile
 
 There are "docker-compose.yml" and "Dockerfile".
 
@@ -156,7 +143,7 @@ There are "docker-compose.yml" and "Dockerfile".
 
 ### Change createsuperuser.py (Optional):
 
-simple-blog / createsuperuser.py
+unmix-blog/createsuperuser.py
 
 1. Change two 'admin' for your super user name:
 2. Change an 'admin@admin.com' for your email address:
