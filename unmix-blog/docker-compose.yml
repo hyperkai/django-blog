@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+    blog-gunicorn:
+        build: .
+        image: blog-gunicorn
+        container_name: blog-gunicorn
+        ports:
+            - 8000:8000
+        volumes:
+            - static-dir:/app/static
+            - media-dir:/app/media
+    nginx:
+        build: ./nginx
+        image: nginx
+        container_name: nginx
+        ports:
+            - 80:80
+        volumes:
+            - static-dir:/app/static
+            - media-dir:/app/media
+        depends_on:
+            - blog-gunicorn
+volumes:
+    static-dir:
+    media-dir:
+                
