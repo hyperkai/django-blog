@@ -25,8 +25,6 @@ EMAIL_HOST_USER = 'example@gmail.com' (Line 150)
 
 EMAIL_HOST_PASSWORD = 'abcdefg' (Line 151)
 
-===
-
 ---
 
 ## Optional for 2 deployments:
