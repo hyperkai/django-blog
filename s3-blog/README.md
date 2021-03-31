@@ -31,6 +31,8 @@ EMAIL_HOST_PASSWORD = 'abcdefg' (Line 151)
 
 ## Optional for 2 deployments:
 
+===
+
 ### There is the setting for postgresql in settings.py:
 
 simple-blog / django_project / settings.py
