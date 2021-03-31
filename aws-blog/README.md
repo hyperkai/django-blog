@@ -11,7 +11,7 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 ---
 
 ## You have to do for settings.py for 2 deployments:
-aws-blog/django_project/settings.py
+aws-blog / django_project / settings.py
 
 ===
 
@@ -46,7 +46,7 @@ EMAIL_HOST_PASSWORD = 'abcdefg' (Line 132)
 ===
 
 ### Change createsuperuser.py for 2 deployments:
-aws-blog/createsuperuser.py
+aws-blog / createsuperuser.py
 
 1. Change two 'admin' for your super user name:
 2. Change 'admin@admin.com' for your email address:
@@ -71,7 +71,7 @@ User.objects.create_superuser('admin', 'admin@admin.com', 'adminpw')
 
 The version "Python 3.8.5" is recommended to use but the above versions will be fine. "python manage.py collectstaic" is already run. So don't run "python manage.py collectstaic" otherwise error occurs.
 
-You may neet to run "pip install wheel" before running "pip install -r requirements.txt". Otherwise, error will occur.
+You may need to run "pip install wheel" before running "pip install -r requirements.txt". Otherwise, error will occur.
 
 After running "pip install -r requirements.txt""pip install -r requirements.txt", run "python manage.py migrate".
 
