@@ -16,7 +16,7 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 
 ===
 
-SECRET_KEY = 'abcdefg' (Line 11) *If you don't mind security, don't need to change 'abcdefg' which works properly.
+SECRET_KEY = 'abcdefg' (Line 11) <-- If you don't mind security, don't need to change 'abcdefg' which works properly.
 
 AWS_ACCESS_KEY_ID = 'example' (Line 107)
 
