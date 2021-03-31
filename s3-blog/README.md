@@ -15,7 +15,7 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 
 simple-blog / django_project / settings.py
 
-### Change 4 lines to yours for "Reset Password" function:
+### Change 4 lines(# Change to yours) for "Reset Password" function:
 
 ```
 ##### Email settings for "Reset password" function #####
@@ -40,7 +40,7 @@ EMAIL_HOST_PASSWORD = 'abcdefg' # Change to yours
 
 simple-blog / django_project / settings.py
 
-If you use postgresql rather than default sqlite, comment out the sqlite setting and uncomment the postgresql setting then change it.
+If you use postgresql rather than default sqlite, comment out the sqlite setting and uncomment the postgresql setting then change 4 lines(# Change to yours).
 
 *You need to install and configure postgresql yourself.
 
@@ -72,7 +72,7 @@ DATABASES = {
 
 simple-blog / django_project / settings.py
 
-If you use aws s3 bucket rather than default app file system, uncomment the aws s3 bucket setting then change it.
+If you use aws s3 bucket rather than default app file system, uncomment the aws s3 bucket setting then change 3 lines(# Change to yours).
 
 ```
 ##### AWS s3 bucket settings #####
