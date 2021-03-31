@@ -146,9 +146,7 @@ Finally, run "python manage.py runserver 0.0.0.0:8000".
 
 ### Just run "docker-compose up -d --build":
 
-simple-blog / docker-compose.yml
-
-simple-blog / Dockerfile
+simple-blog / docker-compose.yml, simple-blog / Dockerfile
 
 There are "docker-compose.yml" and "Dockerfile".
 
