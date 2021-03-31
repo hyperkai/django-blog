@@ -43,7 +43,7 @@ EMAIL_HOST_PASSWORD = 'abcdefg' (Line 132)
 
 ## Optional:
 
-### There is the setting for postgresql:
+### There is the setting for postgresql in settings.py:
 
 If you use postgresql rather than default sqlite, comment out the sqlite setting and uncomment the postgresql setting like below.
 
