@@ -12,9 +12,9 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 
 ## You have to do for settings.py for 2 deployments:
 
-### Change to yours:
-
 ===
+
+### Change to yours:
 
 SECRET_KEY = 'abcdefg' (Line 11) <-- If you don't mind security, don't need to change 'abcdefg' which works properly.
 
@@ -42,9 +42,9 @@ EMAIL_HOST_PASSWORD = 'abcdefg' (Line 132)
 
 ## Option:
 
-### Change for createsuperuser.py for 2 deployments:
-
 ===
+
+### Change for createsuperuser.py for 2 deployments:
 
 1. Change two 'admin' for your super user name:
 2. Change 'admin@admin.com' for your email address:
@@ -56,8 +56,6 @@ User.objects.create_superuser('admin', 'admin@admin.com', 'adminpw')
 ===
 
 ### If you use gmail, do 2 things below to get over very strong google's security.
-
-===
 
 1. Allow less secure apps: ON ---> https://myaccount.google.com/lesssecureapps
 
