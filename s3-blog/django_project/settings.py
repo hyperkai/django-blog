@@ -117,7 +117,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-'''
+''' 
+##### AWS s3 bucket #####
+
 AWS_ACCESS_KEY_ID = 'example'
 AWS_SECRET_ACCESS_KEY = 'example'
 AWS_STORAGE_BUCKET_NAME = 'example-bucket'
@@ -127,6 +129,8 @@ AWS_DEFAULT_ACL = None
 
 STATICFILES_STORAGE = 'django_project.s3utils.StaticRootS3Boto3Storage'
 DEFAULT_FILE_STORAGE = 'django_project.s3utils.MediaRootS3Boto3Storage'
+
+##########################
 '''
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -139,9 +143,13 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
 
+##### AWS s3 bucket #####
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'example@gmail.com' # Put your email address
 EMAIL_HOST_PASSWORD = 'abcdefg' # Put your email password
+
+##########################
