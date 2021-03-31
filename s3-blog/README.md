@@ -12,23 +12,24 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 ---
 
 ## You have to do for settings.py for 2 deployments:
+
 s3-blog / django_project / settings.py
 
-### Change to yours for "Reset Password" function:
+### Change 4 lines to yours for "Reset Password" function:
 
-EMAIL_HOST = 'smtp.gmail.com' (Line 141)
+EMAIL_HOST = 'smtp.gmail.com' (Line 147)
 
-EMAIL_PORT = 587 (Line 142)
+EMAIL_PORT = 587 (Line 148)
 
-EMAIL_HOST_USER = 'example@gmail.com' (Line 146)
+EMAIL_HOST_USER = 'example@gmail.com' (Line 150)
 
-EMAIL_HOST_PASSWORD = 'abcdefg' (Line 145)
+EMAIL_HOST_PASSWORD = 'abcdefg' (Line 151)
 
 ===
 
 ---
 
-## Optional:
+## Optional for 2 deployments:
 
 ### There is the setting for postgresql in settings.py:
 
@@ -68,19 +69,19 @@ s3-blog / django_project / settings.py
 
 If you use aws s3 bucket rather than default app file system, uncomment the aws s3 bucket setting then change it.
 
-### AWS s3 bucket ###
+##### AWS s3 bucket #####
 
-AWS_ACCESS_KEY_ID = 'example'
-AWS_SECRET_ACCESS_KEY = 'example'
-AWS_STORAGE_BUCKET_NAME = 'example-bucket'
-
+AWS_ACCESS_KEY_ID = 'example' <-- Change to yours
+AWS_SECRET_ACCESS_KEY = 'example' <-- Change to yours
+AWS_STORAGE_BUCKET_NAME = 'example-bucket' <-- Change to yours
+ 
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 
 STATICFILES_STORAGE = 'django_project.s3utils.StaticRootS3Boto3Storage'
 DEFAULT_FILE_STORAGE = 'django_project.s3utils.MediaRootS3Boto3Storage'
 
-######################
+##########################
 
 ===
 
