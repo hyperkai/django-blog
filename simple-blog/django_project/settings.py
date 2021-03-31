@@ -4,18 +4,16 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'abcdefg' # Change to different secret key
+SECRET_KEY = 'abcdefg' # Change to yours
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -29,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +60,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_project.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -71,6 +69,19 @@ DATABASES = {
         'NAME': BASE_DIR / 'db_sqlite3',
     }
 }
+
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mydb', # Change to yours
+        'USER': 'myuser', # Change to yours
+        'PASSWORD': 'mypw', # Change to yours
+        'HOST': '10.156.58.93', # Change to yours
+        'PORT': '5432',
+    }
+}
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -90,7 +101,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -104,24 +114,42 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+
+''' 
+##### AWS s3 bucket setting #####
+
+AWS_ACCESS_KEY_ID = 'example' # Change to yours
+AWS_SECRET_ACCESS_KEY = 'example' # Change to yours
+AWS_STORAGE_BUCKET_NAME = 'example-bucket' # Change to yours
+ 
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+STATICFILES_STORAGE = 'django_project.s3utils.StaticRootS3Boto3Storage'
+DEFAULT_FILE_STORAGE = 'django_project.s3utils.MediaRootS3Boto3Storage'
+
+##################################
+'''
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
 
+##### Email setting for "Reset password" function #####
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.gmail.com' # Change to yours
+EMAIL_PORT = 587 # Change to yours
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'example@gmail.com' # Put your email address
-EMAIL_HOST_PASSWORD = 'abcdefg' # Put your email password
+EMAIL_HOST_USER = 'example@gmail.com' # Change to yours
+EMAIL_HOST_PASSWORD = 'abcdefg' # Change to yours
+
+########################################################
