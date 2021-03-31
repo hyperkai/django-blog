@@ -49,14 +49,14 @@ If you use postgresql rather than default sqlite, comment out the sqlite setting
 
 *You need to install and configure postgresql yourself.
 
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db_sqlite3',
-    }
-}
-'''
+- '''
+- DATABASES = {
+    - 'default': {
+        - 'ENGINE': 'django.db.backends.sqlite3',
+        - 'NAME': BASE_DIR / 'db_sqlite3',
+    - }
+- }
+- '''
 
 DATABASES = {
     'default': {
