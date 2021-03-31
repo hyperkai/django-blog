@@ -150,7 +150,7 @@ simple-blog / docker-compose.yml
 
 simple-blog / Dockerfile
 
-There are "docker-compose.yml" and "Dockerfile.
+There are "docker-compose.yml" and "Dockerfile".
 
 *Run "docker-compose down -v --rmi" to remove all containers, volumes and images.
 
