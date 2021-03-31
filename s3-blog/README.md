@@ -96,6 +96,24 @@ DEFAULT_FILE_STORAGE = 'django_project.s3utils.MediaRootS3Boto3Storage'
 ##################################
 ```
 
+*I commented out the code in simple-blog/users/models.py to enable this app to work with "AWS s3 bucket" properly
+
+Otherwise, this app don't work "AWS s3 bucket" properly.
+
+```
+'''
+    def save(self, *args, **kawrgs):
+        super().save(*args, **kawrgs)
+
+        img = Image.open(self.image.path)
+
+        if img.height > 300 or img.width > 300:
+            output_size = (300, 300)
+            img.thumbnail(output_size)
+            img.save(self.image.path)
+'''
+```
+
 ===
 
 ### If you use gmail, do 2 things below to get over very strong google's security.
