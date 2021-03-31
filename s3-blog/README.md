@@ -1,11 +1,9 @@
-
-
-
---- 
+---
 
 ## s3-blog:
 
-"s3-blog" has an app with aws s3 bucket setting on settings.py. Then, it's run with "python manage.py 0.0.0.0:8000".
+"s3-blog" only has an app without other tools such as nginx, apache, gunicorn and so on. 
+Then, it's simply run with "python manage.py 0.0.0.0:8000".
 
 Moreover, you can use 2 deployment methods,"manual deployment" and "docker-compolse deployment".
 "docker-compolse deployment" is recommanded because you don't need to manually deploy the app 
@@ -15,20 +13,6 @@ running "python3 -m venv venv", "source venv/bin/activate", pip install -r requi
 
 ## You have to do for settings.py for 2 deployments:
 s3-blog / django_project / settings.py
-
-===
-
-### Change to yours:
-
-SECRET_KEY = 'abcdefg' (Line 11) <-- If you don't mind security, don't need to change 'abcdefg' which works properly.
-
-AWS_ACCESS_KEY_ID = 'example' (Line 120)
-
-AWS_SECRET_ACCESS_KEY = 'example' (Line 121)
-
-AWS_STORAGE_BUCKET_NAME = 'example-bucket' (Line 122)
-
-===
 
 ### Change to yours for "Reset Password" function:
 
@@ -50,7 +34,7 @@ EMAIL_HOST_PASSWORD = 'abcdefg' (Line 145)
 
 s3-blog / django_project / settings.py
 
-If you use postgresql rather than default sqlite, comment out the sqlite setting and uncomment the postgresql setting like below.
+If you use postgresql rather than default sqlite, comment out the sqlite setting and uncomment the postgresql setting then change it.
 
 *You need to install and configure postgresql yourself.
 
@@ -75,6 +59,28 @@ DATABASES = {
     }
 }
 ```
+
+===
+
+### There is the setting for aws s3 bucket in settings.py:
+
+s3-blog / django_project / settings.py
+
+If you use aws s3 bucket rather than default app file system, uncomment the aws s3 bucket setting then change it.
+
+### AWS s3 bucket ###
+
+AWS_ACCESS_KEY_ID = 'example'
+AWS_SECRET_ACCESS_KEY = 'example'
+AWS_STORAGE_BUCKET_NAME = 'example-bucket'
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+STATICFILES_STORAGE = 'django_project.s3utils.StaticRootS3Boto3Storage'
+DEFAULT_FILE_STORAGE = 'django_project.s3utils.MediaRootS3Boto3Storage'
+
+######################
 
 ===
 
