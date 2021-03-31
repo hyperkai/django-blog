@@ -144,7 +144,20 @@ Finally, run "python manage.py runserver 0.0.0.0:8000".
 
 ===
 
+### Just run "docker-compose up -d --build":
+
+simple-blog / docker-compose.yml
+
+simple-blog / Dockerfile
+
+There's already been "docker-compose.yml" and "Dockerfile" in this folder.
+
+Run "docker-compose down -v --rmi" to remove all containers, volumes and images.
+
+===
+
 ### Change createsuperuser.py (Optional):
+
 simple-blog / createsuperuser.py
 
 1. Change two 'admin' for your super user name:
@@ -157,14 +170,6 @@ User.objects.create_superuser('admin', 'admin@admin.com', 'adminpw')
 ```
 
 *It works properly with default setting so you don't need to change it if you don't want.
-
-===
-
-There's already been "docker-compose.yml" and "dockerfile" in this folder.
-
-So just run "docker-compose up -d --build" for deployment.
-
-Then run "docker-compose down -v --rmi" to remove all containers, volumes and images.
 
 ===
 
