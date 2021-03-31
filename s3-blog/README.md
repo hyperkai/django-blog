@@ -69,6 +69,7 @@ simple-blog / django_project / settings.py
 
 If you use aws s3 bucket rather than default app file system, uncomment the aws s3 bucket setting then change it.
 
+```
 ##### AWS s3 bucket #####
 
 AWS_ACCESS_KEY_ID = 'example' <-- Change to yours
@@ -82,6 +83,7 @@ STATICFILES_STORAGE = 'django_project.s3utils.StaticRootS3Boto3Storage'
 DEFAULT_FILE_STORAGE = 'django_project.s3utils.MediaRootS3Boto3Storage'
 
 ##########################
+```
 
 ===
 
