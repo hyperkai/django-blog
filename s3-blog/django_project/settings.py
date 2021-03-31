@@ -117,6 +117,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+'''
 AWS_ACCESS_KEY_ID = 'example'
 AWS_SECRET_ACCESS_KEY = 'example'
 AWS_STORAGE_BUCKET_NAME = 'example-bucket'
@@ -126,6 +127,7 @@ AWS_DEFAULT_ACL = None
 
 STATICFILES_STORAGE = 'django_project.s3utils.StaticRootS3Boto3Storage'
 DEFAULT_FILE_STORAGE = 'django_project.s3utils.MediaRootS3Boto3Storage'
+'''
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
