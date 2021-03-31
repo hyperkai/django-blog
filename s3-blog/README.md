@@ -92,8 +92,6 @@ DATABASES = {
 
 The version "Python 3.8.5" is recommended to use but the above versions will be fine.
 
-"python manage.py collectstaic" is already run. So don't run "python manage.py collectstaic" otherwise error occurs.
-
 You may need to run "pip install wheel" before running "pip install -r requirements.txt". Otherwise, error will occur.
 
 After running "pip install -r requirements.txt""pip install -r requirements.txt", run "python manage.py migrate".
