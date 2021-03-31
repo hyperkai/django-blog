@@ -101,7 +101,7 @@ DEFAULT_FILE_STORAGE = 'django_project.s3utils.MediaRootS3Boto3Storage'
 
 The version "Python 3.8.5" is recommended to use but the above versions will be fine.
 
-You may need to run "pip install wheel" before running "pip install -r requirements.txt". Otherwise, error will occur.
+You may need to run "pip install wheel" before running "pip install -r requirements.txt". Otherwise, error may occur.
 
 After running "pip install -r requirements.txt""pip install -r requirements.txt", run "python manage.py migrate".
 
