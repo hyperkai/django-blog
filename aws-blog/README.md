@@ -71,7 +71,7 @@ Finally, run "python manage.py runserver 0.0.0.0:8000".
 
 ===
 
-### Change createsuperuser.py (Optioanl):
+### Change createsuperuser.py (Optional):
 aws-blog / createsuperuser.py
 
 1. Change two 'admin' for your super user name:
@@ -90,7 +90,5 @@ There's already been "docker-compose.yml" and "dockerfiles" in this folder.
 So just run "docker-compose up -d --build" for deployment.
 
 Then run "docker-compose down -v --rmi" to remove all containers, volumes and images.
-
-
 
 ---
