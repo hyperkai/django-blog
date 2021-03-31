@@ -44,7 +44,7 @@ EMAIL_HOST_PASSWORD = 'abcdefg' (Line 132)
 
 ===
 
-### Change for createsuperuser.py for 2 deployments:
+### Change createsuperuser.py for 2 deployments:
 
 1. Change two 'admin' for your super user name:
 2. Change 'admin@admin.com' for your email address:
