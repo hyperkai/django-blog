@@ -18,13 +18,16 @@ simple-blog / django_project / settings.py
 ### Change 4 lines to yours for "Reset Password" function:
 
 ```
-EMAIL_HOST = 'smtp.gmail.com' (Line 147)
+##### Email for "Reset password" function #####
 
-EMAIL_PORT = 587 (Line 148)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com' # Change to yours
+EMAIL_PORT = 587 # Change to yours
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'example@gmail.com' # Change to yours
+EMAIL_HOST_PASSWORD = 'abcdefg' # Change to yours
 
-EMAIL_HOST_USER = 'example@gmail.com' (Line 150)
-
-EMAIL_HOST_PASSWORD = 'abcdefg' (Line 151)
+###############################################
 ```
 
 ---
@@ -54,10 +57,10 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mydb', <-- Change to yours
-        'USER': 'myuser', <-- Change to yours
-        'PASSWORD': 'mypw', <-- Change to yours
-        'HOST': '10.156.58.93', <-- Change to yours
+        'NAME': 'mydb', # Change to yours
+        'USER': 'myuser', # Change to yours
+        'PASSWORD': 'mypw', # Change to yours
+        'HOST': '10.156.58.93', # Change to yours
         'PORT': '5432',
     }
 }
@@ -74,9 +77,9 @@ If you use aws s3 bucket rather than default app file system, uncomment the aws 
 ```
 ##### AWS s3 bucket #####
 
-AWS_ACCESS_KEY_ID = 'example' <-- Change to yours
-AWS_SECRET_ACCESS_KEY = 'example' <-- Change to yours
-AWS_STORAGE_BUCKET_NAME = 'example-bucket' <-- Change to yours
+AWS_ACCESS_KEY_ID = 'example' # Change to yours
+AWS_SECRET_ACCESS_KEY = 'example' # Change to yours
+AWS_STORAGE_BUCKET_NAME = 'example-bucket' # Change to yours
  
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
