@@ -41,29 +41,13 @@ EMAIL_HOST_PASSWORD = 'abcdefg' (Line 132)
 
 ---
 
-## Option:
-
-===
-
-### Change createsuperuser.py for 2 deployments:
-aws-blog / createsuperuser.py
-
-1. Change two 'admin' for your super user name:
-2. Change 'admin@admin.com' for your email address:
-3. Change 'adminpw' for your super user password:
-
-User.objects.filter(username='admin').exists() or \
-User.objects.create_superuser('admin', 'admin@admin.com', 'adminpw')
-
-===
+## Optional:
 
 ### If you use gmail, do 2 things below to get over very strong google's security.
 
 1. Allow less secure apps: ON ---> https://myaccount.google.com/lesssecureapps
 
 2. Allow access to your Google account: ON (Tap "Continue") ---> https://accounts.google.com/DisplayUnlockCaptcha
-
-===
 
 ---
 
@@ -83,10 +67,28 @@ Finally, run "python manage.py runserver 0.0.0.0:8000".
 
 ## Snippet for docker-compose deployment:
 
+===
+
+### Change createsuperuser.py (Optioanl):
+aws-blog / createsuperuser.py
+
+1. Change two 'admin' for your super user name:
+2. Change 'admin@admin.com' for your email address:
+3. Change 'adminpw' for your super user password:
+
+User.objects.filter(username='admin').exists() or \
+User.objects.create_superuser('admin', 'admin@admin.com', 'adminpw')
+
+*It works properly with default setting so you don't need to change it if you don't want.
+
+===
+
 There's already been "docker-compose.yml" and "dockerfiles" in this folder.
 
 So just run "docker-compose up -d --build" for deployment.
 
 Then run "docker-compose down -v --rmi" to remove all containers, volumes and images.
+
+
 
 ---
