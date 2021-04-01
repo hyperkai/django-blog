@@ -40,7 +40,7 @@ EMAIL_HOST_PASSWORD = 'abcdefg' # Change to yours
 
 ## You have to do for default.conf:
 
-unmix-blog/django_project/settings.py
+unmix-blog/nginx/default.conf
 
 ### Change 10.156.58.203(# Change to yours) for "Reset password" function:
 
