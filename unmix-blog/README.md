@@ -36,6 +36,35 @@ EMAIL_HOST_PASSWORD = 'abcdefg' # Change to yours
 
 ########################################################
 ```
+---
+
+## You have to do for default.conf:
+
+unmix-blog/django_project/settings.py
+
+### Change 10.156.58.203(# Change to yours) for "Reset password" function:
+
+```
+upstream 10.156.58.203 { # Change to yours
+    server blog-gunicorn:8000;
+}
+
+server {
+    listen   80;
+
+    location / {        
+        proxy_pass http://10.156.58.203; # Change to yours
+    }
+
+    location /static/ {
+        alias   /app/static/;
+    }
+
+    location /media/ {
+        alias   /app/media/;
+    }
+}
+```
 
 ---
 
