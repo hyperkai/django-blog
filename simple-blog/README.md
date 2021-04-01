@@ -25,7 +25,7 @@ simple-blog/django_project/settings.py
 
 ### Change 4 lines(# Change to yours) for "Reset password" function:
 
-*The email setting is for "Gmail". You may need to set it up for other emails.
+*The email setting is for "Gmail". You may need different setup for other emails.
 
 ```
 ##### Email setting for "Reset password" function #####
