@@ -44,6 +44,8 @@ unmix-blog/nginx/default.conf
 
 ### Change 10.156.58.203(# Change to yours) for "Reset password" function:
 
+*Put your hostname there.
+
 ```
 upstream 10.156.58.203 { # Change to yours
     server blog-gunicorn:8000;
