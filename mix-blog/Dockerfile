@@ -14,6 +14,8 @@ RUN python3 manage.py migrate
 RUN python3 manage.py shell < createsuperuser.py
 
 COPY ./supervisor/gunicorn.conf /etc/supervisor/conf.d/gunicorn.conf
+RUN touch /gunicorn.out.log /gunicorn.err.log
+
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
 CMD service supervisor start && nginx -g "daemon off;"
