@@ -2,7 +2,7 @@
 
 ## mix-blog:
 
-"mix-blog" uses only one container which has 3 tools, this app, gunicorn and nginx in one container.
+"mix-blog" uses only one container which has 5 tools, this app, ubuntu:20.04, gunicorn, supervisor and nginx in one container.
 
 You can only deploy this app with "docker-compose".
 
