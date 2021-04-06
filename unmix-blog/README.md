@@ -2,9 +2,7 @@
 
 ## unmix-blog:
 
-"unmix-blog" has 3 tools. This app and gunicorn in one container and nginx in one container.
-
-In total, there are 2 containers and 3 tools are unmixed in one container.
+"unmix-blog" uses 2 containers and 3 tools. One container has this app and gunicorn and one container has nginx.
 
 You can only deploy this app with "docker-compose".
 
