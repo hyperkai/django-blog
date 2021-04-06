@@ -168,7 +168,7 @@ Otherwise, this app doesn't work with "AWS s3 bucket" properly.
 
 ### Just run "docker-compose up -d --build":
 
-mix-blog/docker-compose.yml, unmix-blog/Dockerfile
+mix-blog/docker-compose.yml, mix-blog/Dockerfile
 
 There are "docker-compose.yml" and "Dockerfile".
 
