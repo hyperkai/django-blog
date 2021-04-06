@@ -47,23 +47,21 @@ mix-blog/nginx/default.conf
 *Put your hostname there.
 
 ```
-upstream 10.156.58.203 { # Change to yours
-    server blog-gunicorn:8000;
-}
-
 server {
-    listen   80;
-
-    location / {        
-        proxy_pass http://10.156.58.203; # Change to yours
-    }
+    listen 80;
+    server_name 10.156.58.203; # Change to yours
 
     location /static/ {
-        alias   /app/static/;
+        alias /app/static/;
     }
 
     location /media/ {
-        alias   /app/media/;
+        alias /app/media/;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/gunicorn.sock;
     }
 }
 ```
