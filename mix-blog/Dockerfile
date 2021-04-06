@@ -9,6 +9,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y python-is-python3=3.8.2-4 \
 python3-pip libpq-dev python3-testresources gunicorn supervisor nginx
 
+ENV PYTHONUNBUFFERED 1
+
 RUN pip3 install --target=/usr/local/lib/python3.8/dist-packages -r requirements.txt
 RUN python3 manage.py migrate
 RUN python3 manage.py shell < createsuperuser.py
