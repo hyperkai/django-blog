@@ -1,14 +1,14 @@
 ---
 
-## unmix-blog:
+## mix-blog:
 
-"unmix-blog" has 3 tools. This app and gunicorn in one container and nginx in one container.
+"mix-blog" has 3 tools. This app and gunicorn in one container and nginx in one container.
 
 In total, there are 2 containers and 3 tools are unmixed in one container.
 
 You can only deploy this app with "docker-compose".
 
-Run "docker-compose up -d --build" (unmix-blog/docker-compose.yml)
+Run "docker-compose up -d --build" (mix-blog/docker-compose.yml)
 
 Default super user name is 'admin'.
 
@@ -20,7 +20,7 @@ Default super user password is 'adminpw'.
 
 ## You have to do for settings.py:
 
-unmix-blog/django_project/settings.py
+mix-blog/django_project/settings.py
 
 ### Change 4 lines(# Change to yours) for "Reset password" function:
 
@@ -42,7 +42,7 @@ EMAIL_HOST_PASSWORD = 'abcdefg' # Change to yours
 
 ## You have to do for default.conf:
 
-unmix-blog/nginx/default.conf
+mix-blog/nginx/default.conf
 
 ### Change 10.156.58.203(# Change to yours) for "Reset password" function:
 
@@ -74,7 +74,7 @@ server {
 
 ## Optional for settings.py:
 
-unmix-blog/django_project/settings.py
+mix-blog/django_project/settings.py
 
 ===
 
@@ -136,7 +136,7 @@ DEFAULT_FILE_STORAGE = 'django_project.s3utils.MediaRootS3Boto3Storage'
 ##################################
 ```
 
-*I commented out the code in "unmix-blog/users/models.py" to enable this app to work with "AWS s3 bucket" properly.
+*I commented out the code in "mix-blog/users/models.py" to enable this app to work with "AWS s3 bucket" properly.
 
 Otherwise, this app doesn't work with "AWS s3 bucket" properly.
 
@@ -172,7 +172,7 @@ Otherwise, this app doesn't work with "AWS s3 bucket" properly.
 
 ### Just run "docker-compose up -d --build":
 
-unmix-blog/docker-compose.yml, unmix-blog/Dockerfile
+mix-blog/docker-compose.yml, unmix-blog/Dockerfile
 
 There are "docker-compose.yml" and "Dockerfile".
 
@@ -182,7 +182,7 @@ There are "docker-compose.yml" and "Dockerfile".
 
 ### Change createsuperuser.py (Optional):
 
-unmix-blog/createsuperuser.py
+mix-blog/createsuperuser.py
 
 1. Change two 'admin' for your super user name:
 2. Change an 'admin@admin.com' for your email address:
