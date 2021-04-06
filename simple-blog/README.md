@@ -2,7 +2,7 @@
 
 ## simple-blog:
 
-"simple-blog" has this app and alpine:3.13 without other tools such as nginx, apache, gunicorn and so on. 
+"simple-blog" has this app and alpine without other tools such as nginx, apache, gunicorn and so on. 
 Then, it's simply run with "python manage.py 0.0.0.0:8000".
 
 Moreover, you can use 2 deployment methods, "manual deployment" and "docker-compolse deployment".
