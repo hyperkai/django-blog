@@ -48,7 +48,7 @@ unmix-blog/nginx/default.conf
 
 ```
 upstream 10.156.58.203 { # Change to yours
-    server blog-gunicorn:8000;
+    server blog:8000;
 }
 
 server {
@@ -59,11 +59,11 @@ server {
     }
 
     location /static/ {
-        alias   /app/static/;
+        alias   /blog/static/;
     }
 
     location /media/ {
-        alias   /app/media/;
+        alias   /blog/media/;
     }
 }
 ```
