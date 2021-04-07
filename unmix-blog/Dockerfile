@@ -2,7 +2,7 @@ FROM python:3.10.0a6-alpine3.13
 
 ENV PYTHONUNBUFFERED 1
 
-WORKDIR /app
+WORKDIR /blog
 
 ADD . .
 
