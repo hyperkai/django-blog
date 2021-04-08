@@ -8,10 +8,12 @@ ADD . .
 
 RUN apk add --no-cache gcc musl-dev python3-dev \ 
     libffi-dev openssl-dev cargo postgresql-dev \
-    jpeg-dev zlib-dev
+    jpeg-dev zlib-dev curl
 RUN pip install -r requirements.txt
 RUN python manage.py migrate
 RUN python manage.py shell < createsuperuser.py
+
+HEALTHCHECK CMD curl -f http://localhost:8000/ || exit 1
 
 CMD python manage.py runserver 0.0.0.0:8000
 
