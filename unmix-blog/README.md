@@ -12,7 +12,7 @@ Default super user name is 'admin'.
 
 Default super user password is 'adminpw'.
 
-*Run "docker-compose down -v --rmi" to remove all containers, volumes and images.
+*Run "docker-compose down -v --rmi" to remove all containers, networks, volumes and images.
 
 ---
 
