@@ -109,6 +109,7 @@ unmix-blog/nginx/default.conf
 
 If you use aws ecs fargate, change 2 lines(# Change to yours).
 
+```
 server {
     listen   80;
     server_name _; # Change to yours ("localhost" for ecs fargate in aws)
