@@ -112,14 +112,14 @@ If you use aws ecs fargate, change 2 lines(# Change to yours).
 ```
 server {
     listen   80;
-    server_name _; # Change to yours ("localhost" for ecs fargate in aws)
+    server_name _; # Change to yours ("localhost" for aws ecs fargate)
 
     location / {
         proxy_set_header Host $http_host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_pass http://blog:8000; # Change to yours ("http://localhost:8000" for ecs fargate in aws)
+        proxy_pass http://blog:8000; # Change to yours ("http://localhost:8000" for aws ecs fargate)
     }
 
     location /static/ {
