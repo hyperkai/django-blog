@@ -103,6 +103,34 @@ DEFAULT_FILE_STORAGE = 'django_project.s3utils.MediaRootS3Boto3Storage'
 ##################################
 ```
 
+## Optional for default.conf:
+
+unmix-blog/nginx/default.conf
+
+If you use aws ecs fargate, change 2 lines(# Change to yours).
+
+server {
+    listen   80;
+    server_name _; # Change to yours ("localhost" for ecs fargate in aws)
+
+    location / {
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_pass http://blog:8000; # Change to yours ("http://localhost:8000" for ecs fargate in aws)
+    }
+
+    location /static/ {
+        alias   /blog/static/;
+    }
+
+    location /media/ {
+        alias   /blog/media/;
+    }
+}
+```
+
 *I commented out the code in "unmix-blog/users/models.py" to enable this app to work with "AWS s3 bucket" properly.
 
 Otherwise, this app doesn't work with "AWS s3 bucket" properly.
