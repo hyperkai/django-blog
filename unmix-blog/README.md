@@ -38,36 +38,6 @@ EMAIL_HOST_PASSWORD = 'abcdefg' # Change to yours
 ```
 ---
 
-## You have to do for default.conf:
-
-unmix-blog/nginx/default.conf
-
-### Change 10.156.58.203(# Change to yours) for "Reset password" function:
-
-*Put your hostname there.
-
-```
-upstream 10.156.58.203 { # Change to yours
-    server blog:8000;
-}
-
-server {
-    listen   80;
-
-    location / {        
-        proxy_pass http://10.156.58.203; # Change to yours
-    }
-
-    location /static/ {
-        alias   /blog/static/;
-    }
-
-    location /media/ {
-        alias   /blog/media/;
-    }
-}
-```
-
 ---
 
 ## Optional for settings.py:
